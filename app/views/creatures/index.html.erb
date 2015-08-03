@@ -1,0 +1,14 @@
+<h1>Creatures List</h1>
+
+<% @creatures.each do |creature| %>
+
+    <div>
+        <h4>Species: <%= creature.species.titleize %> <br> </h4>
+        Description: <%= creature.description %> <br>
+        Location Found: <%= creature.location_found %> <br>
+        <%= link_to "Delete", creature, method: :delete, class: "btn btn-default" %>
+        <%= link_to "Edit", edit_creature_path(creature), class: 
+        "btn btn-default" %>
+    </div>
+
+<% end %>
